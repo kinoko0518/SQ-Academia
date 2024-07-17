@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://rwimktyburju"]
+
+[ext_resource type="FontFile" uid="uid://c3v2qvc4x3kt3" path="res://FreeSerifBold.ttf" id="1_062m0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j2ads"]
+content_margin_left = 20.0
+content_margin_top = 20.0
+content_margin_right = 20.0
+content_margin_bottom = 20.0
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="Label" type="Label"]
+theme_override_fonts/font = ExtResource("1_062m0")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_j2ads")
+text = "HogeはFugaか：
+回答・Piyo　正答・Fuga"
+autowrap_mode = 3

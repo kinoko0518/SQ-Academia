@@ -1,0 +1,100 @@
+[gd_scene load_steps=8 format=3 uid="uid://d0w0ns1berijr"]
+
+[ext_resource type="Theme" uid="uid://bdf4igm4opnd4" path="res://Fortissimo.tres" id="1_hqrqy"]
+[ext_resource type="Script" path="res://Functions/Study/Scripts/lesson.gd" id="2_8crqv"]
+[ext_resource type="Texture2D" uid="uid://dn1wvyat86ilm" path="res://Functions/Study/Images/Background.jpg" id="2_jlj1v"]
+[ext_resource type="FontFile" uid="uid://c3v2qvc4x3kt3" path="res://FreeSerifBold.ttf" id="3_f73an"]
+[ext_resource type="Script" path="res://Functions/Study/Scripts/Classes/question_class.gd" id="3_qwchg"]
+
+[sub_resource type="Resource" id="Resource_8r7xq"]
+script = ExtResource("3_qwchg")
+question = "How they call \"what they value in ther culture\" in Japanese?"
+answers = Array[String](["Hoge"])
+choises = Array[String]([])
+correct_choise = -1
+
+[sub_resource type="Resource" id="Resource_e84vy"]
+script = ExtResource("3_qwchg")
+question = "Num 2"
+answers = Array[String]([])
+choises = Array[String](["Hoge", "Fuga"])
+correct_choise = 0
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_hqrqy")
+script = ExtResource("2_8crqv")
+questions_temp = Array[ExtResource("3_qwchg")]([SubResource("Resource_8r7xq"), SubResource("Resource_e84vy")])
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_jlj1v")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.277778
+anchor_top = 0.457407
+anchor_right = 0.701646
+anchor_bottom = 0.52037
+theme_override_font_sizes/font_size = 40
+text = "Next"
+metadata/_edit_use_anchors_ = true
+
+[node name="TextEdit" type="TextEdit" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.037037
+anchor_top = 0.150926
+anchor_right = 0.962963
+anchor_bottom = 0.418519
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -925.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("3_f73an")
+theme_override_font_sizes/font_size = 35
+text = "Q. HogehogeはFugafugaか"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+anchor_left = 0.037037
+anchor_top = 0.150926
+anchor_right = 0.962963
+anchor_bottom = 0.418519
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Hogehoge"
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Fugafuga"

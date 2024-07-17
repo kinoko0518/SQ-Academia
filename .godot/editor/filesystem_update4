@@ -1,0 +1,12 @@
+res://Functions/Classes/Datas/Timetables/class4_timetable.tres
+res://Fortissimo.tres
+res://Functions/Classes/Scripts/SlideMenu.gd
+res://Functions/StudyHome/StudyHome.tscn
+res://Functions/Classes/Main.tscn
+res://Functions/Study/StudyHome.tscn
+res://Functions/Study/study.gd
+res://Functions/Study/Scripts/Classes/lesson.gd
+res://Functions/Study/Scripts/study.gd
+res://Functions/Study/Scripts/Classes/question_class.gd
+res://Functions/Study/Scripts/lesson.gd
+res://Functions/Study/checking_answer.tscn

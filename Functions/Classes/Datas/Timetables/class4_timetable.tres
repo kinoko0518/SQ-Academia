@@ -1,0 +1,114 @@
+[gd_resource type="Resource" script_class="Timetable" load_steps=20 format=3 uid="uid://ddh6pul8sptj4"]
+
+[ext_resource type="Script" path="res://Functions/Classes/Scripts/Classes/Class.gd" id="1_28rvy"]
+[ext_resource type="Script" path="res://Functions/Classes/Scripts/Classes/Timetable.gd" id="2_3kisi"]
+
+[sub_resource type="Resource" id="Resource_a07ln"]
+script = ExtResource("1_28rvy")
+className = "D.S Basic"
+class_teacher = ""
+is_half = false
+
+[sub_resource type="Resource" id="Resource_sajss"]
+script = ExtResource("1_28rvy")
+className = "English IB"
+class_teacher = "Dr. Andrea"
+is_half = false
+
+[sub_resource type="Resource" id="Resource_sniww"]
+script = ExtResource("1_28rvy")
+className = "Math IA"
+class_teacher = "Dr. Arima"
+is_half = false
+
+[sub_resource type="Resource" id="Resource_0l6q0"]
+script = ExtResource("1_28rvy")
+className = "Chemical I"
+class_teacher = "Dr. Oshima"
+is_half = false
+
+[sub_resource type="Resource" id="Resource_caqc7"]
+script = ExtResource("1_28rvy")
+className = "Japanese IB"
+class_teacher = "Dr. Yamagiwa"
+is_half = false
+
+[sub_resource type="Resource" id="Resource_oumqt"]
+script = ExtResource("1_28rvy")
+className = "English IA"
+class_teacher = "Dr. Suzuki"
+is_half = false
+
+[sub_resource type="Resource" id="Resource_l1knq"]
+script = ExtResource("1_28rvy")
+className = "SelfStudy"
+class_teacher = ""
+is_half = false
+
+[sub_resource type="Resource" id="Resource_mgqmy"]
+script = ExtResource("1_28rvy")
+className = "C.E"
+class_teacher = ""
+is_half = false
+
+[sub_resource type="Resource" id="Resource_e5ibp"]
+script = ExtResource("1_28rvy")
+className = "E.E"
+class_teacher = ""
+is_half = false
+
+[sub_resource type="Resource" id="Resource_765ou"]
+script = ExtResource("1_28rvy")
+className = "P.E"
+class_teacher = "Dr. Taga"
+is_half = false
+
+[sub_resource type="Resource" id="Resource_qqehu"]
+script = ExtResource("1_28rvy")
+className = "Japanese IA"
+class_teacher = "Dr. Kawano"
+is_half = false
+
+[sub_resource type="Resource" id="Resource_f1njj"]
+script = ExtResource("1_28rvy")
+className = "Math IB"
+class_teacher = "Dr. Na"
+is_half = false
+
+[sub_resource type="Resource" id="Resource_fyc2i"]
+script = ExtResource("1_28rvy")
+className = "Geo/Biology"
+class_teacher = "Dr. Nagata"
+is_half = false
+
+[sub_resource type="Resource" id="Resource_6a3w6"]
+script = ExtResource("1_28rvy")
+className = "HR"
+class_teacher = ""
+is_half = true
+
+[sub_resource type="Resource" id="Resource_qbh6q"]
+script = ExtResource("1_28rvy")
+className = "English IA"
+class_teacher = "Dr. Suzuki"
+is_half = false
+
+[sub_resource type="Resource" id="Resource_uk4m6"]
+script = ExtResource("1_28rvy")
+className = "Math IA"
+class_teacher = "Dr. Arima"
+is_half = false
+
+[sub_resource type="Resource" id="Resource_2mua8"]
+script = ExtResource("1_28rvy")
+className = "Geograph"
+class_teacher = "Dr. Nomura"
+is_half = false
+
+[resource]
+script = ExtResource("2_3kisi")
+mon_timetable = Array[ExtResource("1_28rvy")]([SubResource("Resource_0l6q0"), SubResource("Resource_caqc7"), SubResource("Resource_oumqt"), SubResource("Resource_l1knq")])
+tue_timetable = Array[ExtResource("1_28rvy")]([SubResource("Resource_qqehu"), SubResource("Resource_f1njj"), SubResource("Resource_fyc2i"), SubResource("Resource_6a3w6")])
+wed_timetable = Array[ExtResource("1_28rvy")]([SubResource("Resource_qbh6q"), SubResource("Resource_uk4m6"), SubResource("Resource_2mua8")])
+thu_timetable = Array[ExtResource("1_28rvy")]([SubResource("Resource_mgqmy"), SubResource("Resource_e5ibp"), SubResource("Resource_765ou")])
+fri_timetable = Array[ExtResource("1_28rvy")]([SubResource("Resource_a07ln"), SubResource("Resource_sajss"), SubResource("Resource_sniww")])
