@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="SQAcademia"
+config/tags=PackedStringArray("for_school", "tool")
 run/main_scene="res://Functions/Classes/Main.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"

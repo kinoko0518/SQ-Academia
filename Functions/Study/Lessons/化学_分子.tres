@@ -1,0 +1,73 @@
+[gd_resource type="Resource" script_class="Lesson" load_steps=12 format=3 uid="uid://dbg4ggssphrjg"]
+
+[ext_resource type="Script" path="res://Functions/Study/Scripts/Classes/question_class.gd" id="1_nh7cr"]
+[ext_resource type="Script" path="res://Functions/Study/Scripts/Classes/lesson_class.gd" id="2_6y76t"]
+
+[sub_resource type="Resource" id="Resource_lbw7x"]
+script = ExtResource("1_nh7cr")
+question = "対になっている電子をなんというか。"
+answers = Array[String](["電子対"])
+choises = Array[String]([])
+correct_choise = -1
+
+[sub_resource type="Resource" id="Resource_rfu18"]
+script = ExtResource("1_nh7cr")
+question = "対になっていない電子をなんというか。"
+answers = Array[String](["不対電子"])
+choises = Array[String]([])
+correct_choise = -1
+
+[sub_resource type="Resource" id="Resource_yuhvo"]
+script = ExtResource("1_nh7cr")
+question = "共有結合において、複数の原子にまたがって電子対を形成したものを特別になんというか。"
+answers = Array[String](["共有電子対"])
+choises = Array[String]([])
+correct_choise = -1
+
+[sub_resource type="Resource" id="Resource_undgx"]
+script = ExtResource("1_nh7cr")
+question = "共有結合において、複数の原子にまたがらずに電子対を形成したものを特別になんというか。"
+answers = Array[String](["非共有電子対"])
+choises = Array[String]([])
+correct_choise = -1
+
+[sub_resource type="Resource" id="Resource_5xkep"]
+script = ExtResource("1_nh7cr")
+question = "最外殻電子が四つの時、電子対はいくつあるか。"
+answers = Array[String]([])
+choises = Array[String](["0", "", "4"])
+correct_choise = 0
+
+[sub_resource type="Resource" id="Resource_l13w5"]
+script = ExtResource("1_nh7cr")
+question = "ある原子が他の原子何個と共有結合できるかに注目した時、不対電子の数のことをなんというか。ただし、結合の手は正式名称ではないため不正解とする。"
+answers = Array[String](["電子価"])
+choises = Array[String]([])
+correct_choise = -1
+
+[sub_resource type="Resource" id="Resource_ho8yu"]
+script = ExtResource("1_nh7cr")
+question = "単一の共有結合で結ばれた結合のことをなんというか。"
+answers = Array[String](["単結合"])
+choises = Array[String]([])
+correct_choise = -1
+
+[sub_resource type="Resource" id="Resource_atxf2"]
+script = ExtResource("1_nh7cr")
+question = "二つの共有結合で結ばれた結合のことをなんというか。"
+answers = Array[String](["二重結合"])
+choises = Array[String]([])
+correct_choise = -1
+
+[sub_resource type="Resource" id="Resource_mghdh"]
+script = ExtResource("1_nh7cr")
+question = "三つの共有結合で結ばれた結合のことをなんというか。"
+answers = Array[String](["三重結合"])
+choises = Array[String]([])
+correct_choise = -1
+
+[resource]
+script = ExtResource("2_6y76t")
+lesson_name = "分子"
+subject = 6
+questions = Array[ExtResource("1_nh7cr")]([SubResource("Resource_lbw7x"), SubResource("Resource_rfu18"), SubResource("Resource_yuhvo"), SubResource("Resource_undgx"), SubResource("Resource_5xkep"), SubResource("Resource_l13w5"), SubResource("Resource_ho8yu"), SubResource("Resource_atxf2"), SubResource("Resource_mghdh")])

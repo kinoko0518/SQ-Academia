@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dm0s33i628iee"]
+
+[ext_resource type="PackedScene" uid="uid://calrfjxvqergc" path="res://Functions/Study/LessonSelect.tscn" id="1_vu6km"]
+[ext_resource type="PackedScene" uid="uid://d0w0ns1berijr" path="res://Functions/Study/Lesson.tscn" id="2_k1prc"]
+
+[node name="LessonMain" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LessonSelect" parent="." instance=ExtResource("1_vu6km")]
+layout_mode = 1
+
+[node name="Lesson" parent="." instance=ExtResource("2_k1prc")]
+layout_mode = 1

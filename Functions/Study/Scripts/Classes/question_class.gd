@@ -7,8 +7,8 @@ class_name Question
 @export_multiline var choises:Array[String]
 @export var correct_choise:int = -1
 
-func get_answer_example():
+func get_answers():
 	if not correct_choise == -1:
-		return choises[correct_choise]
+		return [choises[correct_choise]]
 	else:
-		return answers[0]
+		return answers
