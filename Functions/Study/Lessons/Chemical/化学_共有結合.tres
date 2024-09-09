@@ -1,0 +1,108 @@
+[gd_resource type="Resource" script_class="Lesson" load_steps=17 format=3 uid="uid://dbg4ggssphrjg"]
+
+[ext_resource type="Script" path="res://Functions/Study/Scripts/Classes/question_class.gd" id="1_iitxv"]
+[ext_resource type="Script" path="res://Functions/Study/Scripts/Classes/lesson_class.gd" id="2_mwhyq"]
+
+[sub_resource type="Resource" id="Resource_lbw7x"]
+script = ExtResource("1_iitxv")
+question = "対になっている電子をなんというか。"
+answers = Array[String](["電子対"])
+choises = Array[String]([])
+correct_choise = -1
+
+[sub_resource type="Resource" id="Resource_rfu18"]
+script = ExtResource("1_iitxv")
+question = "対になっていない電子をなんというか。"
+answers = Array[String](["不対電子"])
+choises = Array[String]([])
+correct_choise = -1
+
+[sub_resource type="Resource" id="Resource_yuhvo"]
+script = ExtResource("1_iitxv")
+question = "共有結合において、複数の原子にまたがって電子対を形成したものを特別になんというか。"
+answers = Array[String](["共有電子対"])
+choises = Array[String]([])
+correct_choise = -1
+
+[sub_resource type="Resource" id="Resource_undgx"]
+script = ExtResource("1_iitxv")
+question = "共有結合において、複数の原子にまたがらずに電子対を形成したものを特別になんというか。"
+answers = Array[String](["非共有電子対"])
+choises = Array[String]([])
+correct_choise = -1
+
+[sub_resource type="Resource" id="Resource_5xkep"]
+script = ExtResource("1_iitxv")
+question = "最外殻電子が四つの時、電子対はいくつあるか。"
+answers = Array[String]([])
+choises = Array[String](["0", "2", "4"])
+correct_choise = 0
+
+[sub_resource type="Resource" id="Resource_l13w5"]
+script = ExtResource("1_iitxv")
+question = "ある原子が他の原子何個と共有結合できるかに注目した時、不対電子の数のことをなんというか。ただし、結合の手は正式名称ではないため不正解とする。"
+answers = Array[String](["電子価"])
+choises = Array[String]([])
+correct_choise = -1
+
+[sub_resource type="Resource" id="Resource_ho8yu"]
+script = ExtResource("1_iitxv")
+question = "単一の共有結合で結ばれた結合のことをなんというか。"
+answers = Array[String](["単結合"])
+choises = Array[String]([])
+correct_choise = -1
+
+[sub_resource type="Resource" id="Resource_atxf2"]
+script = ExtResource("1_iitxv")
+question = "二つの共有結合で結ばれた結合のことをなんというか。"
+answers = Array[String](["二重結合"])
+choises = Array[String]([])
+correct_choise = -1
+
+[sub_resource type="Resource" id="Resource_mghdh"]
+script = ExtResource("1_iitxv")
+question = "三つの共有結合で結ばれた結合のことをなんというか。"
+answers = Array[String](["三重結合"])
+choises = Array[String]([])
+correct_choise = -1
+
+[sub_resource type="Resource" id="Resource_1dygs"]
+script = ExtResource("1_iitxv")
+question = "小さいほど陽イオンになりやすい(陽性になりやすい)性質のことをなんというか。"
+answers = Array[String](["イオン化エネルギー"])
+choises = Array[String]([])
+correct_choise = -1
+
+[sub_resource type="Resource" id="Resource_gpeel"]
+script = ExtResource("1_iitxv")
+question = "大きければ大きいほど陰イオンになりやすい性質のことをなんというか。"
+answers = Array[String](["電気親和力"])
+choises = Array[String]([])
+correct_choise = -1
+
+[sub_resource type="Resource" id="Resource_7sfmu"]
+script = ExtResource("1_iitxv")
+question = "原子から電子一個を取り去るために必要なエネルギーのことをなんというか。"
+answers = Array[String](["第一イオン化エネルギー"])
+choises = Array[String]([])
+correct_choise = -1
+
+[sub_resource type="Resource" id="Resource_ublgf"]
+script = ExtResource("1_iitxv")
+question = "一価カチオンの定義として正しいものを選べ。"
+answers = Array[String]([])
+choises = Array[String](["一価の陰イオン", "一価の単原子陽イオン", "一価の多原子陰イオン", "一価の多原子陽イオン"])
+correct_choise = 1
+
+[sub_resource type="Resource" id="Resource_a5oxr"]
+script = ExtResource("1_iitxv")
+question = "同一周期で原子番号が大きくなると陰性と陽性のどちらが大きくなるか。また、それはなぜか。"
+answers = Array[String]([])
+choises = Array[String](["陰性　電子と原子核の距離が大きくなるため", "陽性　電子と原子核の距離が大きくなるため", "陰性　原子核と電子の間の電気力が大きくなるため", "陽性　原子核と電子の間の電気力が大きくなるため"])
+correct_choise = 3
+
+[resource]
+script = ExtResource("2_mwhyq")
+lesson_name = "共有結合"
+subject = 6
+questions = Array[ExtResource("1_iitxv")]([SubResource("Resource_lbw7x"), SubResource("Resource_rfu18"), SubResource("Resource_yuhvo"), SubResource("Resource_undgx"), SubResource("Resource_5xkep"), SubResource("Resource_l13w5"), SubResource("Resource_ho8yu"), SubResource("Resource_atxf2"), SubResource("Resource_mghdh"), SubResource("Resource_1dygs"), SubResource("Resource_gpeel"), SubResource("Resource_7sfmu"), SubResource("Resource_ublgf"), SubResource("Resource_a5oxr")])

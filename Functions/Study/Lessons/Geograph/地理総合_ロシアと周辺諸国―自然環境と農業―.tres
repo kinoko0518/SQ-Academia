@@ -1,0 +1,94 @@
+[gd_resource type="Resource" script_class="Lesson" load_steps=15 format=3 uid="uid://q7uddbr0mabe"]
+
+[ext_resource type="Script" path="res://Functions/Study/Scripts/Classes/question_class.gd" id="1_n8ihl"]
+[ext_resource type="Script" path="res://Functions/Study/Scripts/Classes/lesson_class.gd" id="2_giptd"]
+
+[sub_resource type="Resource" id="Resource_ax2ne"]
+script = ExtResource("1_n8ihl")
+question = "ロシアの土地の大部分は何で出来ているか．"
+answers = Array[String](["安定陸塊", "安定陸塊", "クラトン", "剛塊"])
+choises = Array[String]([])
+correct_choise = -1
+
+[sub_resource type="Resource" id="Resource_0a366"]
+script = ExtResource("1_n8ihl")
+question = "ロシアの南端はどの造山帯に属すか．"
+answers = Array[String](["アルプス=ヒマラヤ造山帯", "アルプス＝ヒマラヤ造山帯"])
+choises = Array[String]([])
+correct_choise = -1
+
+[sub_resource type="Resource" id="Resource_mhg1e"]
+script = ExtResource("1_n8ihl")
+question = "ロシアの東端はどの造山帯に属しているか．"
+answers = Array[String](["環太平洋造山帯"])
+choises = Array[String]([])
+correct_choise = -1
+
+[sub_resource type="Resource" id="Resource_xfyb0"]
+script = ExtResource("1_n8ihl")
+question = "ロシアの東端と南端は古期造山帯，新期造山帯のうちのどちらに属すか．"
+answers = Array[String]([])
+choises = Array[String](["新期造山帯", "古期造山帯"])
+correct_choise = 0
+
+[sub_resource type="Resource" id="Resource_341bk"]
+script = ExtResource("1_n8ihl")
+question = "ウラル山脈は古期造山帯，新期造山帯のどちらに属すか．"
+answers = Array[String](["古期造山帯"])
+choises = Array[String]([])
+correct_choise = -1
+
+[sub_resource type="Resource" id="Resource_nt841"]
+script = ExtResource("1_n8ihl")
+question = "ロシアは何をヨーロパロシアとシベリアの境界としているか．"
+answers = Array[String](["ウラル山脈"])
+choises = Array[String]([])
+correct_choise = -1
+
+[sub_resource type="Resource" id="Resource_vs6rv"]
+script = ExtResource("1_n8ihl")
+question = "全体としてロシアの河川はどの方位からどの方位へ流れるか．"
+answers = Array[String](["", "南から北へ"])
+choises = Array[String]([])
+correct_choise = -1
+
+[sub_resource type="Resource" id="Resource_q4ytu"]
+script = ExtResource("1_n8ihl")
+question = "ロシアの中央アジア部はどの気候帯に属するか．"
+answers = Array[String](["乾燥気候"])
+choises = Array[String]([])
+correct_choise = -1
+
+[sub_resource type="Resource" id="Resource_ntym5"]
+script = ExtResource("1_n8ihl")
+question = "ロシアの西側はどの気候区分に属するか．"
+answers = Array[String](["冷帯湿潤気候"])
+choises = Array[String]([])
+correct_choise = -1
+
+[sub_resource type="Resource" id="Resource_xl1xw"]
+script = ExtResource("1_n8ihl")
+question = "ロシアの東側はどの気候区分に属するか．"
+answers = Array[String](["冷帯冬季少雨気候"])
+choises = Array[String]([])
+correct_choise = -1
+
+[sub_resource type="Resource" id="Resource_6f4ur"]
+script = ExtResource("1_n8ihl")
+question = "冷帯冬季少雨気候の夏と冬で気温差が激しいのには何が関連しているか．一つ答えなさい．"
+answers = Array[String](["シベリア高気圧", "陸地の熱しやすく冷めやすい性質", "ヒマラヤ山脈"])
+choises = Array[String]([])
+correct_choise = -1
+
+[sub_resource type="Resource" id="Resource_a2e3p"]
+script = ExtResource("1_n8ihl")
+question = "夏だけ苔や小低木が生えるような気候の気候区分を答えなさい．"
+answers = Array[String](["ツンドラ性気候"])
+choises = Array[String]([])
+correct_choise = -1
+
+[resource]
+script = ExtResource("2_giptd")
+lesson_name = "ロシアと周辺諸国―自然環境と農業―"
+subject = 9
+questions = Array[ExtResource("1_n8ihl")]([SubResource("Resource_ax2ne"), SubResource("Resource_0a366"), SubResource("Resource_mhg1e"), SubResource("Resource_xfyb0"), SubResource("Resource_341bk"), SubResource("Resource_nt841"), SubResource("Resource_vs6rv"), SubResource("Resource_q4ytu"), SubResource("Resource_ntym5"), SubResource("Resource_xl1xw"), SubResource("Resource_6f4ur"), SubResource("Resource_a2e3p")])

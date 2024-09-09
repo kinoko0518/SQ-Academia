@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Lesson" load_steps=5 format=3 uid="uid://bny8xxw1enirc"]
+
+[ext_resource type="Script" path="res://Functions/Study/Scripts/Classes/question_class.gd" id="1_657mi"]
+[ext_resource type="Script" path="res://Functions/Study/Scripts/Classes/lesson_class.gd" id="2_f8oix"]
+
+[sub_resource type="Resource" id="Resource_e2hjp"]
+script = ExtResource("1_657mi")
+question = "分子結晶はなんの力で凝集しているか"
+answers = Array[String](["分子間力", "ファンデルワールス力"])
+choises = Array[String]([])
+correct_choise = -1
+
+[sub_resource type="Resource" id="Resource_fabv3"]
+script = ExtResource("1_657mi")
+question = "ファンデルワールス力は分子が大きくなるほど強くなるか．弱くなるか．"
+answers = Array[String](["強くなる", "大きくなる"])
+choises = Array[String]([])
+correct_choise = -1
+
+[resource]
+script = ExtResource("2_f8oix")
+lesson_name = "分子結晶"
+subject = 6
+questions = Array[ExtResource("1_657mi")]([SubResource("Resource_e2hjp"), SubResource("Resource_fabv3")])

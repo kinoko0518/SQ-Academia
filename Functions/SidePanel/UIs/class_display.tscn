@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://bbet14c8owigi"]
+
+[ext_resource type="FontFile" uid="uid://c3v2qvc4x3kt3" path="res://Themes/Fortissimo/FreeSerifBold.ttf" id="1_ipfh7"]
+[ext_resource type="Script" path="res://Functions/ConstantFontSize/Scripts/ConstantFontSize_Client.gd" id="2_ggeqr"]
+
+[node name="VBoxContainer" type="VBoxContainer"]
+offset_right = 218.0
+offset_bottom = 98.0
+theme_override_constants/separation = -10
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_ipfh7")
+theme_override_font_sizes/font_size = 60
+text = "Math IA"
+horizontal_alignment = 1
+script = ExtResource("2_ggeqr")
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_ipfh7")
+theme_override_font_sizes/font_size = 30
+text = "Dr. Arima"
+horizontal_alignment = 1
+script = ExtResource("2_ggeqr")

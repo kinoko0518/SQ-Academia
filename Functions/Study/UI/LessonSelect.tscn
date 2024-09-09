@@ -1,0 +1,105 @@
+[gd_scene load_steps=11 format=3 uid="uid://calrfjxvqergc"]
+
+[ext_resource type="Theme" uid="uid://bdf4igm4opnd4" path="res://Themes/Fortissimo/Fortissimo.tres" id="1_sv4ly"]
+[ext_resource type="Script" path="res://Functions/Study/Scripts/LessonSelector.gd" id="2_5n3hs"]
+[ext_resource type="FontFile" uid="uid://c3v2qvc4x3kt3" path="res://Themes/Fortissimo/FreeSerifBold.ttf" id="2_egxfv"]
+[ext_resource type="Script" path="res://Functions/Study/Scripts/Classes/lesson_class.gd" id="3_4lid4"]
+[ext_resource type="Resource" uid="uid://dbg4ggssphrjg" path="res://Functions/Study/Lessons/Chemical/化学_共有結合.tres" id="4_3fhy0"]
+[ext_resource type="Resource" uid="uid://deef3d31tj17j" path="res://Functions/Study/Lessons/Chemical/化学_分子の形.tres" id="5_cdowy"]
+[ext_resource type="Resource" uid="uid://bny8xxw1enirc" path="res://Functions/Study/Lessons/Chemical/化学_分子結晶.tres" id="5_xr5v4"]
+[ext_resource type="Resource" uid="uid://dvq5d0un6ui5w" path="res://Functions/Study/Lessons/Chemical/化学_周期表.tres" id="6_8kljg"]
+[ext_resource type="Resource" uid="uid://c81ljbgvpeytw" path="res://Functions/Study/Lessons/Chemical/化学_極性.tres" id="7_ymus3"]
+[ext_resource type="Resource" uid="uid://bgkmduqsmfqcy" path="res://Functions/Study/Lessons/Chemical/化学_配位結合.tres" id="8_1b8ir"]
+
+[node name="LessonSelect" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_sv4ly")
+script = ExtResource("2_5n3hs")
+lesson_datas = Array[ExtResource("3_4lid4")]([ExtResource("4_3fhy0"), ExtResource("5_xr5v4"), ExtResource("5_cdowy"), ExtResource("6_8kljg"), ExtResource("7_ymus3"), ExtResource("8_1b8ir")])
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 1, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer"]
+layout_mode = 2
+horizontal_scroll_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("2_egxfv")
+theme_override_font_sizes/font_size = 35
+text = "Select Lesson"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="OptionButton" type="OptionButton" parent="MarginContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+selected = 0
+item_count = 12
+popup/item_0/text = "All"
+popup/item_1/text = "JapaneseIB"
+popup/item_1/id = 1
+popup/item_2/text = "JapaneseIA"
+popup/item_2/id = 2
+popup/item_3/text = "EnglishIA"
+popup/item_3/id = 3
+popup/item_4/text = "EnglishIB"
+popup/item_4/id = 4
+popup/item_5/text = "MathIA"
+popup/item_5/id = 5
+popup/item_6/text = "MathIB"
+popup/item_6/id = 6
+popup/item_7/text = "Chemical"
+popup/item_7/id = 7
+popup/item_8/text = "Geology"
+popup/item_8/id = 8
+popup/item_9/text = "Biology"
+popup/item_9/id = 9
+popup/item_10/text = "Geograph"
+popup/item_10/id = 10
+popup/item_11/text = "DSBasic"
+popup/item_11/id = 11
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Hoge"
+
+[connection signal="item_selected" from="MarginContainer/ScrollContainer/VBoxContainer/OptionButton" to="." method="_on_option_button_item_selected"]

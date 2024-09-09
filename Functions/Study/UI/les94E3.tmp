@@ -1,0 +1,28 @@
+[gd_scene load_steps=12 format=3 uid="uid://dm0s33i628iee"]
+
+[ext_resource type="PackedScene" uid="uid://calrfjxvqergc" path="res://Functions/Study/UI/LessonSelect.tscn" id="1_vu6km"]
+[ext_resource type="Script" path="res://Functions/Study/Scripts/Classes/lesson_class.gd" id="2_4myld"]
+[ext_resource type="PackedScene" uid="uid://d0w0ns1berijr" path="res://Functions/Study/UI/Lesson.tscn" id="2_k1prc"]
+[ext_resource type="Resource" uid="uid://dbg4ggssphrjg" path="res://Functions/Study/Lessons/Chemical/化学_共有結合.tres" id="3_ee3ww"]
+[ext_resource type="Resource" uid="uid://bny8xxw1enirc" path="res://Functions/Study/Lessons/Chemical/化学_分子結晶.tres" id="4_qpcpy"]
+[ext_resource type="Resource" uid="uid://deef3d31tj17j" path="res://Functions/Study/Lessons/Chemical/化学_分子の形.tres" id="5_fceyx"]
+[ext_resource type="Resource" uid="uid://dvq5d0un6ui5w" path="res://Functions/Study/Lessons/Chemical/化学_周期表.tres" id="6_dkwvt"]
+[ext_resource type="Resource" uid="uid://c81ljbgvpeytw" path="res://Functions/Study/Lessons/Chemical/化学_極性.tres" id="7_1b3tc"]
+[ext_resource type="Resource" uid="uid://bgkmduqsmfqcy" path="res://Functions/Study/Lessons/Chemical/化学_配位結合.tres" id="8_jkow8"]
+[ext_resource type="Resource" uid="uid://q7uddbr0mabe" path="res://Functions/Study/Lessons/Geograph/地理総合_ロシアと周辺諸国―自然環境と農業―.tres" id="9_5a67c"]
+[ext_resource type="Resource" uid="uid://bnrqy6bxhgror" path="res://Functions/Study/Lessons/Geograph/地理総合_欧州地域（１）―自然環境と農業―.tres" id="10_xv8xl"]
+
+[node name="LessonMain" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LessonSelect" parent="." instance=ExtResource("1_vu6km")]
+layout_mode = 1
+lesson_datas = Array[ExtResource("2_4myld")]([ExtResource("3_ee3ww"), ExtResource("4_qpcpy"), ExtResource("5_fceyx"), ExtResource("6_dkwvt"), ExtResource("7_1b3tc"), ExtResource("8_jkow8"), ExtResource("9_5a67c"), ExtResource("10_xv8xl")])
+
+[node name="Lesson" parent="." instance=ExtResource("2_k1prc")]
+layout_mode = 1

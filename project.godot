@@ -12,19 +12,27 @@ config_version=5
 
 config/name="SQAcademia"
 config/tags=PackedStringArray("for_school", "tool")
-run/main_scene="res://Functions/Classes/Main.tscn"
+run/main_scene="res://Functions/SidePanel/UIs/Main.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-ConstantFontSize="*res://Functions/Classes/Scripts/ConstantFontSize/Scripts/UI/ConstantFontSize.gd"
+ConstantFontSize="*res://Functions/ConstantFontSize/Scripts/ConstantFontSize.gd"
 
 [display]
 
-window/size/viewport_width=486
-window/size/viewport_height=1080
+window/size/viewport_width=542
+window/size/viewport_height=1206
 window/handheld/orientation=1
+
+[input]
+
+on_clicked={
+"deadzone": 0.5,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":1,"canceled":false,"pressed":false,"double_click":false,"script":null)
+]
+}
 
 [rendering]
 

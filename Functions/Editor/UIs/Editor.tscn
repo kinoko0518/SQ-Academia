@@ -1,0 +1,281 @@
+[gd_scene load_steps=12 format=3 uid="uid://y0ijbdrdeqd1"]
+
+[ext_resource type="Theme" uid="uid://b3thelk0t5ahu" path="res://Themes/Arcaico/Arcaico.tres" id="1_286yu"]
+[ext_resource type="Script" path="res://Functions/Editor/Scripts/lesson_maker.gd" id="2_mwlej"]
+[ext_resource type="FontFile" uid="uid://dsdkkta6ms4ve" path="res://Themes/Arcaico/CascadiaMono.ttf" id="2_wfnsf"]
+[ext_resource type="Script" path="res://Functions/ConstantFontSize/Scripts/ConstantFontSize_Client.gd" id="3_pl0lf"]
+[ext_resource type="Texture2D" uid="uid://c0yqyu0e8b8ko" path="res://Functions/Editor/Sprites/gold_cloud1.png" id="4_oms2t"]
+[ext_resource type="Texture2D" uid="uid://ddtlglb0quxnw" path="res://Functions/Editor/Sprites/gold_cloud2.png" id="5_5txle"]
+[ext_resource type="Script" path="res://Functions/Editor/Scripts/Question.gd" id="5_o6jlu"]
+[ext_resource type="StyleBox" uid="uid://3ly10pb2yvhx" path="res://Themes/Arcaico/bios_flat.tres" id="6_2mn24"]
+[ext_resource type="Texture2D" uid="uid://bt1sgqx11mjp5" path="res://Themes/Arcaico/cross_mark.png" id="8_8a2fv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xcqb4"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3gqnu"]
+bg_color = Color(0, 0, 1, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_286yu")
+script = ExtResource("2_mwlej")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 1, 1)
+
+[node name="TextureRect2" type="TextureRect" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.546125
+anchor_top = 0.0845771
+anchor_right = 1.11624
+anchor_bottom = 0.181592
+texture = ExtResource("5_5txle")
+expand_mode = 1
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.133914
+theme_override_fonts/font = ExtResource("2_wfnsf")
+theme_override_font_sizes/font_size = 40
+text = "Lesson Maker"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("3_pl0lf")
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.426199
+anchor_top = -0.00746269
+anchor_right = 0.516605
+anchor_bottom = 0.119403
+texture = ExtResource("4_oms2t")
+expand_mode = 1
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.109453
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+metadata/_edit_use_anchors_ = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xcqb4")
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/ScrollContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="LessonNameLabel" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Lesson Name"
+horizontal_alignment = 1
+script = ExtResource("3_pl0lf")
+
+[node name="LessonName" type="LineEdit" parent="MarginContainer/ScrollContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+placeholder_text = "Lesson Name Here"
+script = ExtResource("3_pl0lf")
+
+[node name="SubjectLabel" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Subject"
+horizontal_alignment = 1
+script = ExtResource("3_pl0lf")
+
+[node name="Subject" type="OptionButton" parent="MarginContainer/ScrollContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+script = ExtResource("3_pl0lf")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Question" type="MarginContainer" parent="MarginContainer/ScrollContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+script = ExtResource("5_o6jlu")
+
+[node name="Panel" type="Panel" parent="MarginContainer/ScrollContainer/VBoxContainer/VBoxContainer/Question"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_3gqnu")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/ScrollContainer/VBoxContainer/VBoxContainer/Question"]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="Essenses" type="VBoxContainer" parent="MarginContainer/ScrollContainer/VBoxContainer/VBoxContainer/Question/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Delete" type="TextureButton" parent="MarginContainer/ScrollContainer/VBoxContainer/VBoxContainer/Question/MarginContainer/Essenses"]
+custom_minimum_size = Vector2(15, 15)
+layout_mode = 2
+size_flags_horizontal = 8
+texture_normal = ExtResource("8_8a2fv")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="QuestionTypeLabel" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer/VBoxContainer/Question/MarginContainer/Essenses"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_wfnsf")
+text = "Question Type"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("3_pl0lf")
+metadata/_edit_use_anchors_ = true
+
+[node name="QuestionType" type="OptionButton" parent="MarginContainer/ScrollContainer/VBoxContainer/VBoxContainer/Question/MarginContainer/Essenses"]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("6_2mn24")
+selected = 0
+item_count = 2
+popup/item_0/text = "Choice Question"
+popup/item_0/id = 1
+popup/item_1/text = "Essay Question"
+popup/item_1/id = 1
+
+[node name="QuestionTypeLabel2" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer/VBoxContainer/Question/MarginContainer/Essenses"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_wfnsf")
+text = "Question"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("3_pl0lf")
+metadata/_edit_use_anchors_ = true
+
+[node name="Question" type="TextEdit" parent="MarginContainer/ScrollContainer/VBoxContainer/VBoxContainer/Question/MarginContainer/Essenses"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+theme_override_constants/caret_width = 10
+placeholder_text = "融銅はまだ眩めかず
+白いハロウも燃えたたず
+地平線ばかり明るくなつたり陰つたり
+はんぶん溶けたり澱んだり
+しきりにさつきからゆれてゐる "
+wrap_mode = 1
+
+[node name="ChoiceQuestion" type="VBoxContainer" parent="MarginContainer/ScrollContainer/VBoxContainer/VBoxContainer/Question/MarginContainer/Essenses"]
+visible = false
+layout_mode = 2
+
+[node name="FalseChoices" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer/VBoxContainer/Question/MarginContainer/Essenses/ChoiceQuestion"]
+layout_mode = 2
+text = "False Choices"
+horizontal_alignment = 1
+script = ExtResource("3_pl0lf")
+
+[node name="FalseChoicesContainer" type="VBoxContainer" parent="MarginContainer/ScrollContainer/VBoxContainer/VBoxContainer/Question/MarginContainer/Essenses/ChoiceQuestion"]
+layout_mode = 2
+
+[node name="AddFalseChoice" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/VBoxContainer/Question/MarginContainer/Essenses/ChoiceQuestion"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Add Choice"
+
+[node name="TrueChoices" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer/VBoxContainer/Question/MarginContainer/Essenses/ChoiceQuestion"]
+layout_mode = 2
+text = "Correct Choice"
+horizontal_alignment = 1
+script = ExtResource("3_pl0lf")
+
+[node name="LineEdit" type="LineEdit" parent="MarginContainer/ScrollContainer/VBoxContainer/VBoxContainer/Question/MarginContainer/Essenses/ChoiceQuestion"]
+layout_mode = 2
+
+[node name="EssayQuestion" type="VBoxContainer" parent="MarginContainer/ScrollContainer/VBoxContainer/VBoxContainer/Question/MarginContainer/Essenses"]
+visible = false
+layout_mode = 2
+
+[node name="AnswersLabel" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer/VBoxContainer/Question/MarginContainer/Essenses/EssayQuestion"]
+layout_mode = 2
+text = "Answers"
+horizontal_alignment = 1
+script = ExtResource("3_pl0lf")
+
+[node name="Answers" type="VBoxContainer" parent="MarginContainer/ScrollContainer/VBoxContainer/VBoxContainer/Question/MarginContainer/Essenses/EssayQuestion"]
+layout_mode = 2
+
+[node name="AddAnswer" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/VBoxContainer/Question/MarginContainer/Essenses/EssayQuestion"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Add Answer"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Button" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Add Question"
+
+[node name="Button2" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Export"
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.219557
+anchor_top = 0.863184
+anchor_right = 1.34502
+anchor_bottom = 1.0199
+mouse_filter = 2
+texture = ExtResource("4_oms2t")
+expand_mode = 1
+stretch_mode = 5
+flip_h = true
+metadata/_edit_use_anchors_ = true

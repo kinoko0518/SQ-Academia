@@ -1,0 +1,66 @@
+[gd_resource type="Resource" script_class="Lesson" load_steps=11 format=3 uid="uid://c81ljbgvpeytw"]
+
+[ext_resource type="Script" path="res://Functions/Study/Scripts/Classes/question_class.gd" id="1_s4nf0"]
+[ext_resource type="Script" path="res://Functions/Study/Scripts/Classes/lesson_class.gd" id="2_l807v"]
+
+[sub_resource type="Resource" id="Resource_4c8as"]
+script = ExtResource("1_s4nf0")
+question = "δは化学においてどのような意味を持つか．"
+answers = Array[String](["わずかに"])
+choises = Array[String]([])
+correct_choise = -1
+
+[sub_resource type="Resource" id="Resource_fi1qh"]
+script = ExtResource("1_s4nf0")
+question = "電気陰性度が最強となる原子のグループの名称を答えよ．"
+answers = Array[String](["ハロゲン"])
+choises = Array[String]([])
+correct_choise = -1
+
+[sub_resource type="Resource" id="Resource_1f4hf"]
+script = ExtResource("1_s4nf0")
+question = "δ-の原子は電子を引きつける．正しいか誤りか．"
+answers = Array[String]([])
+choises = Array[String](["正しい", "誤り"])
+correct_choise = 1
+
+[sub_resource type="Resource" id="Resource_gfco3"]
+script = ExtResource("1_s4nf0")
+question = "電気陰性度が高いと，非共有電子対を自分の側に引き寄せるので電荷がわずかにマイナスに偏る．"
+answers = Array[String]([])
+choises = Array[String](["正しい", "誤り"])
+correct_choise = -1
+
+[sub_resource type="Resource" id="Resource_7qwmg"]
+script = ExtResource("1_s4nf0")
+question = "電気陰性度の高い原子と低い原子を近づけるとどちらがプラス側に偏るか．"
+answers = Array[String]([])
+choises = Array[String](["電気陰性度の高い原子", "電気陰性度の低い原子"])
+correct_choise = 1
+
+[sub_resource type="Resource" id="Resource_ql0gc"]
+script = ExtResource("1_s4nf0")
+question = "極性が0の分子を一つ書け．"
+answers = Array[String](["二酸化炭素", "メタン"])
+choises = Array[String]([])
+correct_choise = -1
+
+[sub_resource type="Resource" id="Resource_aqvgk"]
+script = ExtResource("1_s4nf0")
+question = "おなじ原子からなる分子が無極性となる理由として適切なものを選べ．"
+answers = Array[String]([])
+choises = Array[String](["同じ種類の原子からなる分子は，分子量が大きいため無極性となる。", "同じ種類の原子からなる分子は、分子間力が弱いため、無極性となる。", ""])
+correct_choise = 2
+
+[sub_resource type="Resource" id="Resource_lobhy"]
+script = ExtResource("1_s4nf0")
+question = "水と油が混ざりにくいのは極性分子と非極性分子だからであるが，油はどちらに対応するか．"
+answers = Array[String]([])
+choises = Array[String](["無極性分子", "極性分子"])
+correct_choise = 0
+
+[resource]
+script = ExtResource("2_l807v")
+lesson_name = "極性"
+subject = 6
+questions = Array[ExtResource("1_s4nf0")]([SubResource("Resource_4c8as"), SubResource("Resource_fi1qh"), SubResource("Resource_1f4hf"), SubResource("Resource_gfco3"), SubResource("Resource_7qwmg"), SubResource("Resource_ql0gc"), SubResource("Resource_aqvgk"), SubResource("Resource_lobhy")])

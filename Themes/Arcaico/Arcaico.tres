@@ -1,0 +1,46 @@
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://b3thelk0t5ahu"]
+
+[ext_resource type="StyleBox" uid="uid://3ly10pb2yvhx" path="res://Themes/Arcaico/bios_flat.tres" id="1_hurhs"]
+[ext_resource type="StyleBox" uid="uid://cx1klfuqm8bgj" path="res://Themes/Arcaico/bios_textedit.tres" id="2_8pofm"]
+[ext_resource type="FontFile" uid="uid://dsdkkta6ms4ve" path="res://Themes/Arcaico/CascadiaMono.ttf" id="2_phiro"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ilqrt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aq0s6"]
+content_margin_left = 40.0
+content_margin_right = 40.0
+bg_color = Color(0.8, 0.8, 0.8, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(10, 0)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ypuee"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x5l5c"]
+content_margin_left = 20.0
+content_margin_top = 20.0
+content_margin_right = 20.0
+content_margin_bottom = 20.0
+bg_color = Color(0, 0, 1, 1)
+draw_center = false
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(10, 0)
+
+[resource]
+default_font = ExtResource("2_phiro")
+default_font_size = 20
+Button/colors/font_pressed_color = Color(0, 0, 0, 1)
+Button/styles/focus = SubResource("StyleBoxEmpty_ilqrt")
+Button/styles/hover = ExtResource("1_hurhs")
+Button/styles/normal = ExtResource("1_hurhs")
+Button/styles/pressed = SubResource("StyleBoxFlat_aq0s6")
+LineEdit/styles/focus = SubResource("StyleBoxEmpty_ypuee")
+LineEdit/styles/normal = ExtResource("2_8pofm")
+TextEdit/styles/normal = SubResource("StyleBoxFlat_x5l5c")

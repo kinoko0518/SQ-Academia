@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="Lesson" load_steps=6 format=3 uid="uid://bgkmduqsmfqcy"]
+
+[ext_resource type="Script" path="res://Functions/Study/Scripts/Classes/question_class.gd" id="1_nf44y"]
+[ext_resource type="Script" path="res://Functions/Study/Scripts/Classes/lesson_class.gd" id="2_5parp"]
+
+[sub_resource type="Resource" id="Resource_vqmgq"]
+script = ExtResource("1_nf44y")
+question = "一方の原子から[　　]が提供され，それをもう一方の原子と互いに共有することで生じる配合"
+answers = Array[String](["非共有電子対"])
+choises = Array[String]([])
+correct_choise = -1
+
+[sub_resource type="Resource" id="Resource_26n1s"]
+script = ExtResource("1_nf44y")
+question = "配位結合によって生じた結合は共有結合と見分けることが出来るか．"
+answers = Array[String]([])
+choises = Array[String](["出来る", "出来ない"])
+correct_choise = 1
+
+[sub_resource type="Resource" id="Resource_h12ns"]
+script = ExtResource("1_nf44y")
+question = "配位結合に電子を提供した原子の価標は正になるか，負になるか．"
+answers = Array[String]([])
+choises = Array[String](["正", "負"])
+correct_choise = 1
+
+[resource]
+script = ExtResource("2_5parp")
+lesson_name = "配位結合"
+subject = 6
+questions = Array[ExtResource("1_nf44y")]([SubResource("Resource_vqmgq"), SubResource("Resource_26n1s"), SubResource("Resource_h12ns")])

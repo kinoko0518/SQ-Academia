@@ -1,0 +1,294 @@
+[gd_scene load_steps=25 format=3 uid="uid://cjo1rfv5ocnks"]
+
+[ext_resource type="Script" path="res://Functions/Classes/Scripts/SlideMenu.gd" id="1_tk1qa"]
+[ext_resource type="Theme" uid="uid://b3thelk0t5ahu" path="res://Functions/Editor/Theme/Arcaico.tres" id="1_uijgw"]
+[ext_resource type="Script" path="res://Functions/master.gd" id="2_dmjh5"]
+[ext_resource type="Script" path="res://Functions/Classes/Scripts/Classes/Timetable.gd" id="2_hembg"]
+[ext_resource type="FontFile" uid="uid://c3v2qvc4x3kt3" path="res://FreeSerifBold.ttf" id="2_iuf1i"]
+[ext_resource type="Resource" uid="uid://ddh6pul8sptj4" path="res://Functions/Classes/Datas/Timetables/class4_timetable.tres" id="3_ex0xc"]
+[ext_resource type="Script" path="res://Functions/Classes/feature_class.gd" id="3_f8b7f"]
+[ext_resource type="Script" path="res://Functions/Classes/Scripts/ConstantFontSize/Scripts/UI/ConstantFontSize_Client.gd" id="3_rjhkj"]
+[ext_resource type="PackedScene" uid="uid://dm0s33i628iee" path="res://Functions/Study/UI/lesson_main.tscn" id="4_bf8a6"]
+[ext_resource type="PackedScene" uid="uid://y0ijbdrdeqd1" path="res://Functions/Editor/UIs/Editor.tscn" id="5_2jhcs"]
+[ext_resource type="Texture2D" uid="uid://co4f1h77082jn" path="res://Untitled21_20240614222359.png" id="5_wrs5q"]
+[ext_resource type="Texture2D" uid="uid://c0yqyu0e8b8ko" path="res://Functions/Editor/Sprites/gold_cloud1.png" id="7_hwwto"]
+[ext_resource type="PackedScene" uid="uid://ddpk6xgkqg0cv" path="res://Functions/Classes/timetable.tscn" id="8_aolw6"]
+[ext_resource type="Texture2D" uid="uid://dryc5vcicj3gg" path="res://Functions/Classes/Images/Cursor.png" id="8_ncngb"]
+[ext_resource type="Theme" uid="uid://bdf4igm4opnd4" path="res://Fortissimo.tres" id="8_pqcwy"]
+[ext_resource type="Texture2D" uid="uid://b6g4ljbcwgeia" path="res://Functions/Editor/Sprites/gold_cloud3.png" id="8_y8ddl"]
+
+[sub_resource type="Resource" id="Resource_qvwhd"]
+script = ExtResource("3_f8b7f")
+feature_name = "問答"
+scene = ExtResource("4_bf8a6")
+
+[sub_resource type="Resource" id="Resource_iaome"]
+script = ExtResource("3_f8b7f")
+feature_name = "Lesson Editor"
+scene = ExtResource("5_2jhcs")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iojlu"]
+bg_color = Color(0, 0, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8vn4p"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4eh05"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nj7fd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tgy3p"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_amql1"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_uijgw")
+script = ExtResource("2_dmjh5")
+features = Array[ExtResource("3_f8b7f")]([SubResource("Resource_qvwhd")])
+debug_features = Array[ExtResource("3_f8b7f")]([SubResource("Resource_iaome")])
+
+[node name="Features" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_iojlu")
+
+[node name="MarginContainer" type="MarginContainer" parent="Features"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Features/MarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8vn4p")
+horizontal_scroll_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="Features/MarginContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Features/MarginContainer/ScrollContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FeaturesLabel" type="Label" parent="Features/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Features"
+script = ExtResource("3_rjhkj")
+
+[node name="Features" type="MarginContainer" parent="Features/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Buttons" type="VBoxContainer" parent="Features/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer/Features"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="DebugFeaturesLabel" type="Label" parent="Features/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+text = "Debug"
+script = ExtResource("3_rjhkj")
+
+[node name="DebugFeatures" type="MarginContainer" parent="Features/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Buttons" type="VBoxContainer" parent="Features/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer/DebugFeatures"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="TextureRect" type="TextureRect" parent="Features"]
+layout_mode = 0
+anchor_left = 0.416974
+anchor_top = -0.0323383
+anchor_right = 1.2952
+anchor_bottom = 0.103648
+mouse_filter = 2
+texture = ExtResource("7_hwwto")
+expand_mode = 1
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect2" type="TextureRect" parent="Features"]
+layout_mode = 0
+anchor_left = -0.267528
+anchor_top = 0.871476
+anchor_right = 0.610701
+anchor_bottom = 1.00746
+offset_bottom = -0.00012207
+mouse_filter = 2
+texture = ExtResource("7_hwwto")
+expand_mode = 1
+stretch_mode = 5
+flip_h = true
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect3" type="TextureRect" parent="Features"]
+layout_mode = 0
+anchor_left = -0.289668
+anchor_top = 0.456882
+anchor_right = 0.372694
+anchor_bottom = 0.541459
+mouse_filter = 2
+texture = ExtResource("8_y8ddl")
+expand_mode = 1
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="Main" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="SlideMenu" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("8_pqcwy")
+script = ExtResource("1_tk1qa")
+timetables = Array[ExtResource("2_hembg")]([null, null, null, ExtResource("3_ex0xc"), null])
+
+[node name="ColorRect" type="ColorRect" parent="SlideMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 1, 1)
+
+[node name="TextureRect" type="TextureRect" parent="SlideMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_wrs5q")
+expand_mode = 1
+
+[node name="Clock" type="Label" parent="SlideMenu/TextureRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.512346
+anchor_top = 0.249074
+anchor_right = 1.0
+anchor_bottom = 0.380556
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_iuf1i")
+theme_override_font_sizes/font_size = 85
+text = "10:10"
+horizontal_alignment = 1
+vertical_alignment = 2
+script = ExtResource("3_rjhkj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Period" type="Label" parent="SlideMenu/TextureRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.512346
+anchor_top = 0.357407
+anchor_right = 1.0
+anchor_bottom = 0.414815
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_iuf1i")
+theme_override_font_sizes/font_size = 45
+text = "1st Period"
+horizontal_alignment = 1
+script = ExtResource("3_rjhkj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="SlideMenu/TextureRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.537037
+anchor_top = 0.499074
+anchor_right = 0.958848
+anchor_bottom = 0.635185
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_iuf1i")
+theme_override_font_sizes/font_size = 60
+text = "Today's
+Classes"
+horizontal_alignment = 2
+script = ExtResource("3_rjhkj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Timetable" parent="SlideMenu" instance=ExtResource("8_aolw6")]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.689815
+metadata/_edit_use_anchors_ = true
+
+[node name="LastDay" type="TextureButton" parent="SlideMenu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.664609
+anchor_top = 0.646296
+anchor_right = 0.726337
+anchor_bottom = 0.677778
+texture_normal = ExtResource("8_ncngb")
+ignore_texture_size = true
+stretch_mode = 5
+flip_h = true
+metadata/_edit_use_anchors_ = true
+
+[node name="NextDay" type="TextureButton" parent="SlideMenu"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.837449
+anchor_top = 0.646296
+anchor_right = 0.899177
+anchor_bottom = 0.677778
+texture_normal = ExtResource("8_ncngb")
+ignore_texture_size = true
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="TurnOnDebugMode" type="Button" parent="SlideMenu"]
+layout_mode = 0
+anchor_right = 0.51107
+anchor_bottom = 0.247927
+theme_override_styles/focus = SubResource("StyleBoxEmpty_4eh05")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nj7fd")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tgy3p")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_amql1")
+metadata/_edit_use_anchors_ = true
+
+[connection signal="down_drugged" from="." to="." method="_on_down_drugged"]
+[connection signal="left_drugged" from="." to="." method="_on_left_drugged"]
+[connection signal="right_drugged" from="." to="." method="_on_right_drugged"]
+[connection signal="up_drugged" from="." to="." method="_on_up_drugged"]
+[connection signal="button_down" from="SlideMenu/LastDay" to="SlideMenu" method="_on_last_day_button_down"]
+[connection signal="button_down" from="SlideMenu/NextDay" to="SlideMenu" method="_on_next_day_button_down"]
+[connection signal="button_down" from="SlideMenu/TurnOnDebugMode" to="SlideMenu" method="_on_turn_on_debug_mode_button_down"]

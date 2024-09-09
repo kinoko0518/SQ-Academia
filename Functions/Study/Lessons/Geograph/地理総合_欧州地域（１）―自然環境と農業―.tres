@@ -1,0 +1,129 @@
+[gd_resource type="Resource" script_class="Lesson" load_steps=20 format=3 uid="uid://bnrqy6bxhgror"]
+
+[ext_resource type="Script" path="res://Functions/Study/Scripts/Classes/question_class.gd" id="1_jvpcl"]
+[ext_resource type="Script" path="res://Functions/Study/Scripts/Classes/lesson_class.gd" id="2_n2ton"]
+
+[sub_resource type="Resource" id="Resource_26f82"]
+script = ExtResource("1_jvpcl")
+question = "地中海沿岸のピネレー・アルプス・カルパチアの各山脈はどの造山帯に属するか．"
+answers = Array[String](["アルプス・ヒマラヤ造山帯"])
+choises = Array[String]([])
+correct_choise = -1
+
+[sub_resource type="Resource" id="Resource_2ml4f"]
+script = ExtResource("1_jvpcl")
+question = "のピネレー・アルプス・カルパチアの各山脈は古期造山帯と新期造山帯のどちらに属するか．"
+answers = Array[String]([])
+choises = Array[String](["新期造山帯", "古期造山帯"])
+correct_choise = 0
+
+[sub_resource type="Resource" id="Resource_7ew7c"]
+script = ExtResource("1_jvpcl")
+question = "欧州地域の北西側は古期造山帯と新期造山帯のどちらに属するか．"
+answers = Array[String]([])
+choises = Array[String](["新期造山帯", "古期造山帯"])
+correct_choise = 1
+
+[sub_resource type="Resource" id="Resource_hlubo"]
+script = ExtResource("1_jvpcl")
+question = "欧州地域の北東側はどのような地質的特性を持つか．"
+answers = Array[String]([])
+choises = Array[String](["新期造山帯に属する", "古期造山帯に属する", "安定陸塊である"])
+correct_choise = -1
+
+[sub_resource type="Resource" id="Resource_porup"]
+script = ExtResource("1_jvpcl")
+question = "北緯50度以北の土壌は約[　]年前の氷河の影響で痩せ細っている．"
+answers = Array[String](["2万", "20000", "二万"])
+choises = Array[String]([])
+correct_choise = -1
+
+[sub_resource type="Resource" id="Resource_xjf4v"]
+script = ExtResource("1_jvpcl")
+question = "地中海地域はどの気候区分に属するか．"
+answers = Array[String](["地中海性気候"])
+choises = Array[String]([])
+correct_choise = -1
+
+[sub_resource type="Resource" id="Resource_pmuby"]
+script = ExtResource("1_jvpcl")
+question = "地中海が夏に乾燥するのは何が関係しているか．"
+answers = Array[String](["亜熱帯高気圧"])
+choises = Array[String]([])
+correct_choise = -1
+
+[sub_resource type="Resource" id="Resource_tsxke"]
+script = ExtResource("1_jvpcl")
+question = "欧州の北西部はどの気候区分に属するか．"
+answers = Array[String](["西岸海洋性気候"])
+choises = Array[String]([])
+correct_choise = -1
+
+[sub_resource type="Resource" id="Resource_py6mp"]
+script = ExtResource("1_jvpcl")
+question = "欧州の北西部が高緯度であるにもかかわらず温暖である理由の一つである暖流の名称を答えよ．"
+answers = Array[String](["北大西洋海流", "北大西洋暖流"])
+choises = Array[String]([])
+correct_choise = -1
+
+[sub_resource type="Resource" id="Resource_muoea"]
+script = ExtResource("1_jvpcl")
+question = "欧州の北西部が高緯度にも関わらず温暖であるのには偏西風が[　　]の上を通って温められることが理由の一つとして挙げられる．"
+answers = Array[String](["北大西洋海流", "北大西洋暖流"])
+choises = Array[String]([])
+correct_choise = -1
+
+[sub_resource type="Resource" id="Resource_8lxwo"]
+script = ExtResource("1_jvpcl")
+question = "欧州の北東部の気候区分を答えよ．"
+answers = Array[String](["冷帯湿潤気候"])
+choises = Array[String]([])
+correct_choise = -1
+
+[sub_resource type="Resource" id="Resource_e72sy"]
+script = ExtResource("1_jvpcl")
+question = "欧州の北東部と北西部のどちらが寒いか．"
+answers = Array[String]([])
+choises = Array[String](["北東部", "北西部"])
+correct_choise = 0
+
+[sub_resource type="Resource" id="Resource_nivyg"]
+script = ExtResource("1_jvpcl")
+question = "北欧で盛んに行われている第一次産業を，農業のしずらい寒い土地であることに注目して答えよ．"
+answers = Array[String](["林業"])
+choises = Array[String]([])
+correct_choise = -1
+
+[sub_resource type="Resource" id="Resource_4n5dv"]
+script = ExtResource("1_jvpcl")
+question = "氷食地かつ人口が多い地域で盛んな第一次産業を答えよ．"
+answers = Array[String](["酪農"])
+choises = Array[String]([])
+correct_choise = -1
+
+[sub_resource type="Resource" id="Resource_qovcr"]
+script = ExtResource("1_jvpcl")
+question = "氷食地かつ人口の少ない地域で盛んな第一次産業を答えよ．"
+answers = Array[String](["混合農業"])
+choises = Array[String]([])
+correct_choise = -1
+
+[sub_resource type="Resource" id="Resource_yh3p7"]
+script = ExtResource("1_jvpcl")
+question = "地中海の冬季に生産が盛んな作物を答えよ．"
+answers = Array[String](["冬小麦"])
+choises = Array[String]([])
+correct_choise = -1
+
+[sub_resource type="Resource" id="Resource_xsf03"]
+script = ExtResource("1_jvpcl")
+question = "地中海の夏季に生産が盛んな作物を一つ答えよ．"
+answers = Array[String](["オレンジ", "オリーブ", "ブドウ"])
+choises = Array[String]([])
+correct_choise = -1
+
+[resource]
+script = ExtResource("2_n2ton")
+lesson_name = "欧州地域欧州地域（１）―自然環境と農業―"
+subject = 9
+questions = Array[ExtResource("1_jvpcl")]([SubResource("Resource_26f82"), SubResource("Resource_2ml4f"), SubResource("Resource_7ew7c"), SubResource("Resource_hlubo"), SubResource("Resource_porup"), SubResource("Resource_xjf4v"), SubResource("Resource_pmuby"), SubResource("Resource_tsxke"), SubResource("Resource_py6mp"), SubResource("Resource_muoea"), SubResource("Resource_8lxwo"), SubResource("Resource_e72sy"), SubResource("Resource_nivyg"), SubResource("Resource_4n5dv"), SubResource("Resource_qovcr"), SubResource("Resource_yh3p7"), SubResource("Resource_xsf03")])

@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="Lesson" load_steps=7 format=3 uid="uid://deef3d31tj17j"]
+
+[ext_resource type="Script" path="res://Functions/Study/Scripts/Classes/question_class.gd" id="1_gqu7h"]
+[ext_resource type="Script" path="res://Functions/Study/Scripts/Classes/lesson_class.gd" id="2_gg2ib"]
+
+[sub_resource type="Resource" id="Resource_kinlr"]
+script = ExtResource("1_gqu7h")
+question = "分子中の電子対はお互いに負電荷で[　]"
+answers = Array[String](["反発しあう", "反発し合う", "遠ざかろうとする"])
+choises = Array[String]([])
+correct_choise = -1
+
+[sub_resource type="Resource" id="Resource_4i5dc"]
+script = ExtResource("1_gqu7h")
+question = "反発力がより強いのはどちらか．強い方を選べ．"
+answers = Array[String](["共有電子対", "非共有電子対"])
+choises = Array[String](["共有電子対", "非共有電子対"])
+correct_choise = 1
+
+[sub_resource type="Resource" id="Resource_75a4x"]
+script = ExtResource("1_gqu7h")
+question = "二酸化炭素分子は[　　]が存在せず，二重結合が反発する以外の力が生まれないため直線型である．"
+answers = Array[String](["非共有電子対"])
+choises = Array[String]([])
+correct_choise = -1
+
+[sub_resource type="Resource" id="Resource_dpvm7"]
+script = ExtResource("1_gqu7h")
+question = "メタンは中心の炭素原子と共有電子対を共有している四つの水素原子が[　　]で反発しているため正四面体である．"
+answers = Array[String](["等しい力", "均等な力"])
+choises = Array[String]([])
+correct_choise = -1
+
+[resource]
+script = ExtResource("2_gg2ib")
+lesson_name = "分子の形"
+subject = 6
+questions = Array[ExtResource("1_gqu7h")]([SubResource("Resource_kinlr"), SubResource("Resource_4i5dc"), SubResource("Resource_75a4x"), SubResource("Resource_dpvm7")])

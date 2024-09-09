@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="Lesson" load_steps=7 format=3 uid="uid://dvq5d0un6ui5w"]
+
+[ext_resource type="Script" path="res://Functions/Study/Scripts/Classes/question_class.gd" id="1_xdowx"]
+[ext_resource type="Script" path="res://Functions/Study/Scripts/Classes/lesson_class.gd" id="2_2yq3g"]
+
+[sub_resource type="Resource" id="Resource_8x8g4"]
+script = ExtResource("1_xdowx")
+question = "H，Li，Na，K，Rb，Cs，Frが属する族のことをなんというか．"
+answers = Array[String](["アルカリ金属"])
+choises = Array[String]([])
+correct_choise = -1
+
+[sub_resource type="Resource" id="Resource_t8d4x"]
+script = ExtResource("1_xdowx")
+question = "Be，Mg，Ca，Sr，Ba，Raが属する族のことをなんというか．"
+answers = Array[String](["アルカリ土類金属"])
+choises = Array[String]([])
+correct_choise = -1
+
+[sub_resource type="Resource" id="Resource_g14ys"]
+script = ExtResource("1_xdowx")
+question = "F，Cl，Br，I，At，Tsが属する族のことをなんというか．"
+answers = Array[String](["ハロゲン"])
+choises = Array[String]([])
+correct_choise = -1
+
+[sub_resource type="Resource" id="Resource_pskqb"]
+script = ExtResource("1_xdowx")
+question = "Ne，Ar，Kr，Xe，Rn，Ogが属する族のことをなんというか．"
+answers = Array[String](["貴ガス", "希ガス"])
+choises = Array[String]([])
+correct_choise = -1
+
+[resource]
+script = ExtResource("2_2yq3g")
+lesson_name = "周期表(Basic)"
+subject = 6
+questions = Array[ExtResource("1_xdowx")]([SubResource("Resource_8x8g4"), SubResource("Resource_t8d4x"), SubResource("Resource_g14ys"), SubResource("Resource_pskqb")])
