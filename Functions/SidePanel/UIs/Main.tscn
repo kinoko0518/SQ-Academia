@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://cjo1rfv5ocnks"]
+[gd_scene load_steps=24 format=3 uid="uid://cjo1rfv5ocnks"]
 
 [ext_resource type="Script" path="res://Functions/SidePanel/Scripts/SlideMenu.gd" id="1_tk1qa"]
 [ext_resource type="Theme" uid="uid://b3thelk0t5ahu" path="res://Themes/Arcaico/Arcaico.tres" id="1_uijgw"]
@@ -7,10 +7,9 @@
 [ext_resource type="FontFile" uid="uid://c3v2qvc4x3kt3" path="res://Themes/Fortissimo/FreeSerifBold.ttf" id="2_iuf1i"]
 [ext_resource type="Resource" uid="uid://ddh6pul8sptj4" path="res://Functions/SidePanel/Timetables/class4_timetable.tres" id="3_ex0xc"]
 [ext_resource type="Script" path="res://Functions/SidePanel/Scripts/Classes/feature_class.gd" id="3_f8b7f"]
-[ext_resource type="Script" path="res://Functions/ConstantFontSize/Scripts/ConstantFontSize_Client.gd" id="3_rjhkj"]
 [ext_resource type="PackedScene" uid="uid://dm0s33i628iee" path="res://Functions/Study/UI/lesson_main.tscn" id="4_bf8a6"]
 [ext_resource type="PackedScene" uid="uid://y0ijbdrdeqd1" path="res://Functions/Editor/UIs/Editor.tscn" id="5_2jhcs"]
-[ext_resource type="Texture2D" uid="uid://co4f1h77082jn" path="res://Untitled21_20240614222359.png" id="5_wrs5q"]
+[ext_resource type="Texture2D" uid="uid://co4f1h77082jn" path="res://Functions/SidePanel/Images/Untitled21_20240614222359.png" id="5_wrs5q"]
 [ext_resource type="Texture2D" uid="uid://c0yqyu0e8b8ko" path="res://Functions/Editor/Sprites/gold_cloud1.png" id="7_hwwto"]
 [ext_resource type="PackedScene" uid="uid://ddpk6xgkqg0cv" path="res://Functions/SidePanel/UIs/timetable.tscn" id="8_aolw6"]
 [ext_resource type="Texture2D" uid="uid://dryc5vcicj3gg" path="res://Functions/SidePanel/Images/Cursor.png" id="8_ncngb"]
@@ -94,7 +93,6 @@ size_flags_horizontal = 3
 [node name="FeaturesLabel" type="Label" parent="Features/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Features"
-script = ExtResource("3_rjhkj")
 
 [node name="Features" type="MarginContainer" parent="Features/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -107,7 +105,6 @@ theme_override_constants/separation = 20
 visible = false
 layout_mode = 2
 text = "Debug"
-script = ExtResource("3_rjhkj")
 
 [node name="DebugFeatures" type="MarginContainer" parent="Features/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
 visible = false
@@ -156,7 +153,6 @@ stretch_mode = 5
 metadata/_edit_use_anchors_ = true
 
 [node name="Main" type="Control" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -166,7 +162,6 @@ grow_vertical = 2
 mouse_filter = 2
 
 [node name="SlideMenu" type="Control" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -209,7 +204,6 @@ theme_override_font_sizes/font_size = 85
 text = "10:10"
 horizontal_alignment = 1
 vertical_alignment = 2
-script = ExtResource("3_rjhkj")
 metadata/_edit_use_anchors_ = true
 
 [node name="Period" type="Label" parent="SlideMenu/TextureRect"]
@@ -224,7 +218,6 @@ theme_override_fonts/font = ExtResource("2_iuf1i")
 theme_override_font_sizes/font_size = 45
 text = "1st Period"
 horizontal_alignment = 1
-script = ExtResource("3_rjhkj")
 metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="SlideMenu/TextureRect"]
@@ -240,7 +233,6 @@ theme_override_font_sizes/font_size = 60
 text = "Today's
 Classes"
 horizontal_alignment = 2
-script = ExtResource("3_rjhkj")
 metadata/_edit_use_anchors_ = true
 
 [node name="Timetable" parent="SlideMenu" instance=ExtResource("8_aolw6")]

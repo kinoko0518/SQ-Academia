@@ -1,12 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://y0ijbdrdeqd1"]
+[gd_scene load_steps=10 format=3 uid="uid://y0ijbdrdeqd1"]
 
 [ext_resource type="Theme" uid="uid://b3thelk0t5ahu" path="res://Themes/Arcaico/Arcaico.tres" id="1_286yu"]
 [ext_resource type="Script" path="res://Functions/Editor/Scripts/lesson_maker.gd" id="2_mwlej"]
 [ext_resource type="FontFile" uid="uid://dsdkkta6ms4ve" path="res://Themes/Arcaico/CascadiaMono.ttf" id="2_wfnsf"]
-[ext_resource type="Script" path="res://Functions/ConstantFontSize/Scripts/ConstantFontSize_Client.gd" id="3_pl0lf"]
 [ext_resource type="Texture2D" uid="uid://c0yqyu0e8b8ko" path="res://Functions/Editor/Sprites/gold_cloud1.png" id="4_oms2t"]
 [ext_resource type="Texture2D" uid="uid://ddtlglb0quxnw" path="res://Functions/Editor/Sprites/gold_cloud2.png" id="5_5txle"]
-[ext_resource type="Script" path="res://Functions/Editor/Scripts/Question.gd" id="5_o6jlu"]
 [ext_resource type="StyleBox" uid="uid://3ly10pb2yvhx" path="res://Themes/Arcaico/bios_flat.tres" id="6_2mn24"]
 [ext_resource type="Texture2D" uid="uid://bt1sgqx11mjp5" path="res://Themes/Arcaico/cross_mark.png" id="8_8a2fv"]
 
@@ -61,7 +59,6 @@ theme_override_font_sizes/font_size = 40
 text = "Lesson Maker"
 horizontal_alignment = 1
 vertical_alignment = 1
-script = ExtResource("3_pl0lf")
 metadata/_edit_use_anchors_ = true
 
 [node name="TextureRect" type="TextureRect" parent="ColorRect"]
@@ -116,22 +113,18 @@ theme_override_constants/separation = 20
 layout_mode = 2
 text = "Lesson Name"
 horizontal_alignment = 1
-script = ExtResource("3_pl0lf")
 
 [node name="LessonName" type="LineEdit" parent="MarginContainer/ScrollContainer/VBoxContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 placeholder_text = "Lesson Name Here"
-script = ExtResource("3_pl0lf")
 
 [node name="SubjectLabel" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Subject"
 horizontal_alignment = 1
-script = ExtResource("3_pl0lf")
 
 [node name="Subject" type="OptionButton" parent="MarginContainer/ScrollContainer/VBoxContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-script = ExtResource("3_pl0lf")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
@@ -142,7 +135,6 @@ theme_override_constants/margin_left = 30
 theme_override_constants/margin_top = 30
 theme_override_constants/margin_right = 30
 theme_override_constants/margin_bottom = 30
-script = ExtResource("5_o6jlu")
 
 [node name="Panel" type="Panel" parent="MarginContainer/ScrollContainer/VBoxContainer/VBoxContainer/Question"]
 layout_mode = 2
@@ -173,7 +165,6 @@ theme_override_fonts/font = ExtResource("2_wfnsf")
 text = "Question Type"
 horizontal_alignment = 1
 vertical_alignment = 1
-script = ExtResource("3_pl0lf")
 metadata/_edit_use_anchors_ = true
 
 [node name="QuestionType" type="OptionButton" parent="MarginContainer/ScrollContainer/VBoxContainer/VBoxContainer/Question/MarginContainer/Essenses"]
@@ -192,7 +183,6 @@ theme_override_fonts/font = ExtResource("2_wfnsf")
 text = "Question"
 horizontal_alignment = 1
 vertical_alignment = 1
-script = ExtResource("3_pl0lf")
 metadata/_edit_use_anchors_ = true
 
 [node name="Question" type="TextEdit" parent="MarginContainer/ScrollContainer/VBoxContainer/VBoxContainer/Question/MarginContainer/Essenses"]
@@ -214,7 +204,6 @@ layout_mode = 2
 layout_mode = 2
 text = "False Choices"
 horizontal_alignment = 1
-script = ExtResource("3_pl0lf")
 
 [node name="FalseChoicesContainer" type="VBoxContainer" parent="MarginContainer/ScrollContainer/VBoxContainer/VBoxContainer/Question/MarginContainer/Essenses/ChoiceQuestion"]
 layout_mode = 2
@@ -228,7 +217,6 @@ text = "Add Choice"
 layout_mode = 2
 text = "Correct Choice"
 horizontal_alignment = 1
-script = ExtResource("3_pl0lf")
 
 [node name="LineEdit" type="LineEdit" parent="MarginContainer/ScrollContainer/VBoxContainer/VBoxContainer/Question/MarginContainer/Essenses/ChoiceQuestion"]
 layout_mode = 2
@@ -241,7 +229,6 @@ layout_mode = 2
 layout_mode = 2
 text = "Answers"
 horizontal_alignment = 1
-script = ExtResource("3_pl0lf")
 
 [node name="Answers" type="VBoxContainer" parent="MarginContainer/ScrollContainer/VBoxContainer/VBoxContainer/Question/MarginContainer/Essenses/EssayQuestion"]
 layout_mode = 2

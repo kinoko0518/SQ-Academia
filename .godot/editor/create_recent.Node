@@ -1,12 +1,12 @@
-ColorRect
 TextureRect
+Label
+VBoxContainer
+ScrollContainer
+ColorRect
 Control
 Panel
 Button
 MarginContainer
-VBoxContainer
-ScrollContainer
-Label
 TextureButton
 OptionButton
 MenuButton

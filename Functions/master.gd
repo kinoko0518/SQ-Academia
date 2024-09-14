@@ -38,7 +38,9 @@ func _calculate_swipe(swipe_end):
 func _ready():
 	#region Syncing lesson datas with lessons on GitHub
 	var sync_requester = HTTPRequest.new()
-	sync_requester.request("https://api.github.com/repos/<owner>/<repo>/contents/<file_path>")
+	add_child(sync_requester)
+	sync_requester.request_completed.connect(_on_sync_request_completed)
+	sync_requester.request("https://api.github.com/repos/kinoko0518/SQ-Academia/contents/Functions/Study/Lessons")
 	#endregion
 	
 	$Main.visible = true
@@ -76,6 +78,10 @@ func _ready():
 	for _i in range(Lesson.Subjects.keys().size()):
 		DirAccess.make_dir_recursive_absolute("user://Lessons/%s" % [Lesson.Subjects.keys()[_i]])
 
+func _on_sync_request_completed(result, response_code, headers, body):
+	pass
+	# ResourceSaver.save(body)
+
 func open_sidemenu():
 	var _duration = 0.5
 	var _tween = get_tree().create_tween().set_parallel(true).set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_QUAD)
@@ -101,6 +107,8 @@ func open_feature(target:Control):
 		
 		$Main.add_child(target)
 		current_feature = target
+	if current_feature == null:
+		return
 	var _duration = 0.5
 	var _tween = get_tree().create_tween().set_parallel(true).set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_QUAD)
 	

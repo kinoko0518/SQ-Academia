@@ -1,8 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://calrfjxvqergc"]
+[gd_scene load_steps=12 format=3 uid="uid://calrfjxvqergc"]
 
-[ext_resource type="Theme" uid="uid://bdf4igm4opnd4" path="res://Themes/Fortissimo/Fortissimo.tres" id="1_sv4ly"]
+[ext_resource type="Theme" uid="uid://b3thelk0t5ahu" path="res://Themes/Arcaico/Arcaico.tres" id="1_65xcu"]
 [ext_resource type="Script" path="res://Functions/Study/Scripts/LessonSelector.gd" id="2_5n3hs"]
-[ext_resource type="FontFile" uid="uid://c3v2qvc4x3kt3" path="res://Themes/Fortissimo/FreeSerifBold.ttf" id="2_egxfv"]
 [ext_resource type="Script" path="res://Functions/Study/Scripts/Classes/lesson_class.gd" id="3_4lid4"]
 [ext_resource type="Resource" uid="uid://dbg4ggssphrjg" path="res://Functions/Study/Lessons/Chemical/化学_共有結合.tres" id="4_3fhy0"]
 [ext_resource type="Resource" uid="uid://deef3d31tj17j" path="res://Functions/Study/Lessons/Chemical/化学_分子の形.tres" id="5_cdowy"]
@@ -10,6 +9,14 @@
 [ext_resource type="Resource" uid="uid://dvq5d0un6ui5w" path="res://Functions/Study/Lessons/Chemical/化学_周期表.tres" id="6_8kljg"]
 [ext_resource type="Resource" uid="uid://c81ljbgvpeytw" path="res://Functions/Study/Lessons/Chemical/化学_極性.tres" id="7_ymus3"]
 [ext_resource type="Resource" uid="uid://bgkmduqsmfqcy" path="res://Functions/Study/Lessons/Chemical/化学_配位結合.tres" id="8_1b8ir"]
+[ext_resource type="Texture2D" uid="uid://c0yqyu0e8b8ko" path="res://Functions/Editor/Sprites/gold_cloud1.png" id="10_7005i"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kj6h8"]
+content_margin_left = 30.0
+content_margin_top = 30.0
+content_margin_right = 30.0
+content_margin_bottom = 30.0
+bg_color = Color(0, 0, 0, 1)
 
 [node name="LessonSelect" type="Control"]
 layout_mode = 3
@@ -18,7 +25,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_sv4ly")
+theme = ExtResource("1_65xcu")
 script = ExtResource("2_5n3hs")
 lesson_datas = Array[ExtResource("3_4lid4")]([ExtResource("4_3fhy0"), ExtResource("5_xr5v4"), ExtResource("5_cdowy"), ExtResource("6_8kljg"), ExtResource("7_ymus3"), ExtResource("8_1b8ir")])
 
@@ -45,18 +52,17 @@ theme_override_constants/margin_bottom = 30
 
 [node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer"]
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_kj6h8")
 horizontal_scroll_mode = 0
 metadata/_edit_use_anchors_ = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/ScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_constants/separation = 50
 
 [node name="Label" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 15
-theme_override_fonts/font = ExtResource("2_egxfv")
 theme_override_font_sizes/font_size = 35
 text = "Select Lesson"
 horizontal_alignment = 1
@@ -101,5 +107,30 @@ metadata/_edit_use_anchors_ = true
 [node name="Button" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
 text = "Hoge"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.324723
+anchor_top = -0.0107794
+anchor_right = 0.457565
+anchor_bottom = 0.131841
+texture = ExtResource("10_7005i")
+expand_mode = 1
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.357934
+anchor_top = 0.810116
+anchor_right = 1.14022
+anchor_bottom = 0.952736
+texture = ExtResource("10_7005i")
+expand_mode = 1
+stretch_mode = 5
+flip_h = true
+metadata/_edit_use_anchors_ = true
 
 [connection signal="item_selected" from="MarginContainer/ScrollContainer/VBoxContainer/OptionButton" to="." method="_on_option_button_item_selected"]

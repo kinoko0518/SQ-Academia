@@ -24,6 +24,7 @@ ConstantFontSize="*res://Functions/ConstantFontSize/Scripts/ConstantFontSize.gd"
 
 window/size/viewport_width=542
 window/size/viewport_height=1206
+window/stretch/mode="canvas_items"
 window/handheld/orientation=1
 
 [input]
